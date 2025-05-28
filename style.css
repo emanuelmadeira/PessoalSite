@@ -1,0 +1,145 @@
+  /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #464545;
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 1rem 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      background-color: #fd3b00;
+      color: white;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 100px auto 50px;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    section h2 {
+      margin-bottom: 15px;
+      color: #fd3b00;
+      border-bottom: 2px solid #fd3b00;
+      padding-bottom: 5px;
+    }
+
+    /* Foto redonda */
+    #home img {
+      display: block;
+      margin: 0 auto 20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fd3b00;
+    }
+
+    #home h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+    }
+
+    #home p {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #fd3b00;
+    }
+
+    ul.lista-projetos,
+    ul.lista-educacao,
+    ul.lista-habilidades {
+      list-style-type: none;
+    }
+
+    ul.lista-projetos li,
+    ul.lista-educacao li,
+    ul.lista-habilidades li {
+      margin-bottom: 15px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      color: #333;
+    }
+
+  
+    ul.lista-projetos li:hover,
+    ul.lista-educacao li:hover,
+    ul.lista-habilidades li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    }
+
+    li h3 {
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    li p.date {
+      font-style: italic;
+      color: #777;
+      margin-bottom: 8px;
+    }
+
+    a.link {
+      color: #fd3b00;
+      text-decoration: underline;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-wrap: wrap;
+      }
+
+      nav ul li {
+        margin: 8px;
+      }
+      
+    }
