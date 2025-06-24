@@ -52,6 +52,7 @@
       background-color: #fd3b00;
       color: white;
     }
+    
 
     main {
       max-width: 800px;
@@ -129,7 +130,14 @@
       color: #777;
       margin-bottom: 8px;
     }
+    a.logos {
+  text-decoration: none;
+  color: inherit; 
+}
 
+    a.logos:hover {
+  color: #fd3b00; 
+    }
     a.link {
       color: #fd3b00;
       text-decoration: underline;
@@ -146,3 +154,11 @@
       }
       
     }
+    footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-top: 2px solid #fd3b00;
+}
