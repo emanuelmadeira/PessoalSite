@@ -1,29 +1,23 @@
-  // Destaca o menu conforme a rolagem da página
-    const menuLinks = document.querySelectorAll("nav ul li a");
-    const sections = Array.from(menuLinks).map(link => {
-      const id = link.getAttribute("href").slice(1);
-      return document.getElementById(id);
-    });
+const menuLinks = document.querySelectorAll("nav ul li a");
+const sections = Array.from(menuLinks).map(link => document.getElementById(link.getAttribute("href").slice(1))).filter(Boolean);
+const offset = 80;
 
-    function onScroll() {
-      const scrollPos = window.scrollY + window.innerHeight / 3;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        if (sections[i].offsetTop <= scrollPos) {
-          menuLinks.forEach(link => link.classList.remove("active"));
-          menuLinks[i].classList.add("active");
-          break;
-        }
-      }
+window.addEventListener("scroll", () => {
+  const scrollPos = window.scrollY + offset;
+  for (let i = sections.length - 1; i >= 0; i--) {
+    if (sections[i].offsetTop <= scrollPos) {
+      menuLinks.forEach(link => link.classList.remove("active"));
+      menuLinks[i].classList.add("active");
+      break;
     }
+  }
+});
 
-    window.addEventListener("scroll", onScroll);
-
-    // Suaviza o clique no menu
-    menuLinks.forEach(link => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const id = link.getAttribute("href").slice(1);
-        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-      });
-    });
+menuLinks.forEach(link => link.addEventListener("click", e => {
+  e.preventDefault();
+  const target = document.getElementById(link.getAttribute("href").slice(1));
+  if (target) {
+    const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+}));

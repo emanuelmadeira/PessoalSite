@@ -49,7 +49,7 @@
     }
     nav ul li a.active,
     nav ul li a:hover {
-      background-color: #fd3b00;
+      background-color: #a991d6;
       color: white;
     }
     
@@ -66,8 +66,8 @@
 
     section h2 {
       margin-bottom: 15px;
-      color: #fd3b00;
-      border-bottom: 2px solid #fd3b00;
+      color: #a991d6;
+      border-bottom: 2px solid #a991d6;
       padding-bottom: 5px;
     }
 
@@ -79,7 +79,7 @@
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #fd3b00;
+      border: 3px solid #a991d6;
     }
 
     #home h1 {
@@ -91,7 +91,7 @@
     #home p {
       text-align: center;
       font-size: 1.2rem;
-      color: #fd3b00;
+      color: #a991d6;
     }
 
     ul.lista-projetos,
@@ -136,10 +136,10 @@
     }
 
     a.logos:hover {
-    color: #fd3b00; 
+    color: #a991d6; 
     }
     a.link {
-      color: #fd3b00;
+      color: #a991d6;
       text-decoration: underline;
     }
 
@@ -160,5 +160,5 @@
     padding: 20px;
     background-color: #333;
     color: #fff;
-    border-top: 2px solid #fd3b00;
+    border-top: 2px solid #a991d6;
      }
